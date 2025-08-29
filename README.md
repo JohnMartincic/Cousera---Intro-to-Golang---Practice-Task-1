@@ -2,16 +2,13 @@
 
 This repository documents my progress on the first practice task from the Coursera "Introduction to Golang" course. The objective of this task was to take a non-functional Go program, identify the errors, and implement the necessary fixes to make it run as intended.
 
----
-
 ## 🎯 Project Goal
 
 The original program was a simple command-line application designed to:
-1.  Prompt the user to enter their name.
-2.  Read the user's input.
-3.  Print a personalized welcome message to the console.
 
----
+1. Prompt the user to enter their name.
+2. Read the user's input.
+3. Print a personalized welcome message to the console.
 
 ## 🐞 The Errors & The Fixes
 
@@ -19,12 +16,10 @@ The initial code contained several issues that prevented it from compiling and r
 
 The issues I identified and fixed were:
 
-1.  **`package greeter` vs. `package main`**: The entry point of an executable Go program must be in the `main` package. I corrected the package declaration from `greeter` to `main`.
-2.  **Incorrect `fmt.Scanln()` Usage**: The `fmt.Scanln` function requires a pointer to the variable where it should store the input. The original code passed `userName` by value. I fixed this by passing a pointer: `&userName`.
-3.  **Incorrect Main Function Name**: The function that serves as the entry point for the program must be named `main` (lowercase). The original function was named `Main`, which I corrected.
-4.  **Go Version Update**: Updated the `go.mod` file to use Go version `1.25` to ensure the project uses up-to-date language features and dependencies.
-
----
+1. **`package greeter` vs. `package main`**: The entry point of an executable Go program must be in the `main` package. I corrected the package declaration from `greeter` to `main`.
+2. **Incorrect `fmt.Scanln()` Usage**: The `fmt.Scanln` function requires a pointer to the variable where it should store the input. The original code passed `userName` by value. I fixed this by passing a pointer: `&userName`.
+3. **Incorrect Main Function Name**: The function that serves as the entry point for the program must be named `main` (lowercase). The original function was named `Main`, which I corrected.
+4. **Go Version Update**: Updated the `go.mod` file to use Go version `1.25` to ensure the project uses up-to-date language features and dependencies.
 
 ## 🎓 Course Context
 
